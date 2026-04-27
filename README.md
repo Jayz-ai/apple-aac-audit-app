@@ -10,6 +10,25 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
+## かんたんインストール（CLI不要）
+
+インストーラーファイルは **`install_app.command`** です。  
+Finderで `install_app.command` をダブルクリックすると、GUIインストーラーが開きます。  
+「インストール開始」を押すだけで `.venv` 作成と依存関係インストールが実行されます。
+
+### GitHubのREADMEからダウンロードする方法
+
+README上のリンクから直接開けます：[`install_app.command`](./install_app.command)
+
+> 補足: 単体ファイルをブラウザ保存した場合、実行権限が外れることがあります。  
+> その場合は右クリックで開くか、必要に応じて `chmod +x install_app.command` を実行してください。
+
+GitHubから一式を取得する場合は、リポジトリ画面の **Code → Download ZIP** でダウンロードし、展開後に `install_app.command` を実行してください。
+
+## GUI起動
+
+```bash
+./launch_app.command
 ## GUI起動
 
 ```bash
@@ -43,3 +62,9 @@ python3 -m app run input.wav --target-sr 48000 --reports-root ./reports --auto-r
 
 - `afconvert` / `afclip` が必要です（Xcode Command Line Tools等を含む環境）。
 - 24bit WAV向けです。
+
+
+## クリック起動（推奨）
+
+Finderで `launch_app.command` をダブルクリックして起動してください。
+初回のみ、macOSのセキュリティ設定により実行許可が必要な場合があります。
