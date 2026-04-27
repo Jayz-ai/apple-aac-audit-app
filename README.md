@@ -13,6 +13,27 @@ pip install -r requirements.txt
 ## かんたんインストール（CLI不要）
 
 インストーラーファイルは **`install_app.command`** です。  
+Finderで `install_app.command` をダブルクリックすると、インストーラーが起動します（Tk GUIは使わず、Terminal上でセットアップを実行）。  
+`.venv` 作成と依存関係インストールが自動で実行され、完了時にダイアログを表示します。
+
+### GitHubからのダウンロード手順（推奨）
+
+**推奨: リポジトリ画面の `Code → Download ZIP` で一式をダウンロード**し、展開後に `install_app.command` を実行してください。
+
+> READMEのリンクから `install_app.command` 単体を保存した場合、実行権限が外れることがあります。
+
+### 単体ダウンロードしてしまった場合の対処（ターミナル不要）
+
+1. `install_app.command` をFinderで選択
+2. `ファイル > 情報を見る` を開く
+3. `名前と拡張子` で拡張子が `.command` になっていることを確認
+4. `共有とアクセス権` で自分の権限を `読み/書き` に変更
+5. 右クリックから `開く` を選択して実行（Gatekeeper確認を許可）
+
+必要に応じてターミナルで実行権限付与も可能です: `chmod +x install_app.command`
+
+> 補足: 一部環境（Apple提供Python 3.9 + Tk 8.5）で Tk 初期化クラッシュが起きるため、
+> インストーラーは Tk を使わない実装にしています。
 Finderで `install_app.command` をダブルクリックすると、GUIインストーラーが開きます。  
 「インストール開始」を押すだけで `.venv` 作成と依存関係インストールが実行されます。
 
