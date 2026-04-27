@@ -29,6 +29,10 @@ GitHubから一式を取得する場合は、リポジトリ画面の **Code →
 
 ```bash
 ./launch_app.command
+## GUI起動
+
+```bash
+./run_app.command
 ```
 
 または:
