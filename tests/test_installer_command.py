@@ -8,6 +8,9 @@ def test_install_command_runs_without_tkinter_bootstrap() -> None:
     assert "python3 -m venv .venv" in text
     assert '"$VENV_PY" -m pip install -r requirements.txt' in text
     assert "app.installer" not in text
+def test_install_command_uses_gui_installer() -> None:
+    text = Path("install_app.command").read_text(encoding="utf-8")
+    assert "from app.installer import launch_installer; launch_installer()" in text
 
 
 def test_installer_runs_venv_and_pip_install() -> None:

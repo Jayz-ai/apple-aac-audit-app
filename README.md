@@ -34,11 +34,26 @@ Finderで `install_app.command` をダブルクリックすると、インスト
 
 > 補足: 一部環境（Apple提供Python 3.9 + Tk 8.5）で Tk 初期化クラッシュが起きるため、
 > インストーラーは Tk を使わない実装にしています。
+Finderで `install_app.command` をダブルクリックすると、GUIインストーラーが開きます。  
+「インストール開始」を押すだけで `.venv` 作成と依存関係インストールが実行されます。
+
+### GitHubのREADMEからダウンロードする方法
+
+README上のリンクから直接開けます：[`install_app.command`](./install_app.command)
+
+> 補足: 単体ファイルをブラウザ保存した場合、実行権限が外れることがあります。  
+> その場合は右クリックで開くか、必要に応じて `chmod +x install_app.command` を実行してください。
+
+GitHubから一式を取得する場合は、リポジトリ画面の **Code → Download ZIP** でダウンロードし、展開後に `install_app.command` を実行してください。
 
 ## GUI起動
 
 ```bash
 ./launch_app.command
+## GUI起動
+
+```bash
+./run_app.command
 ```
 
 または:

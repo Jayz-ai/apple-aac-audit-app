@@ -34,3 +34,5 @@ echo "[3/3] 依存関係をインストールしています..."
 
 echo "セットアップが完了しました。launch_app.command をダブルクリックして起動してください。"
 /usr/bin/osascript -e 'display dialog "セットアップ完了。次は launch_app.command をダブルクリックしてください。" buttons {"OK"} default button "OK"' >/dev/null 2>&1 || true
+# Finderでダブルクリックしてセットアップするための起動ファイル
+exec python3 -c 'from app.installer import launch_installer; launch_installer()'
