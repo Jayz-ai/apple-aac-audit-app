@@ -13,7 +13,7 @@ pip install -r requirements.txt
 ## GUI起動
 
 ```bash
-./launch_app.command
+./run_app.command
 ```
 
 または:
@@ -43,9 +43,3 @@ python3 -m app run input.wav --target-sr 48000 --reports-root ./reports --auto-r
 
 - `afconvert` / `afclip` が必要です（Xcode Command Line Tools等を含む環境）。
 - 24bit WAV向けです。
-
-
-## クリック起動（推奨）
-
-Finderで `launch_app.command` をダブルクリックして起動してください。
-初回のみ、macOSのセキュリティ設定により実行許可が必要な場合があります。
